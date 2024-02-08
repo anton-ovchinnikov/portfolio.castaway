@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0px;
+}
+
+.author {
+  color: #a1a1a1;
+  font-weight: 400;
+  font-size: 18px;
+
+  @media (hover: hover) {
+    &:hover {
+      color: #8a8a8a;
+    }
+  }
+}

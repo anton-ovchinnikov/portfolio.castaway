@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Плавный скролл
+   */
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+ */
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --link-transition: color 0.1s ease;
+  --btn-transition: background-color 0.1s ease;
+}
+
+body {
+  color: #ffffff;
+  background-color: #191919;
+  padding: 0px 90px 0px 90px;
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: var(--link-transition);
+}
+@media (hover: hover) {
+  a:hover {
+    color: #dadada;
+    transition: var(--link-transition);
+  }
+}
+
+.btn-group {
+  display: flex;
+  column-gap: 1px;
+}
+.btn-group :first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.btn-group :last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  line-height: 27px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: var(--btn-transition);
+  cursor: pointer;
+}
+.btn--active {
+  background-color: #118ad8;
+}
+.btn--rounded {
+  border-radius: 6px;
+}
+@media (hover: hover) {
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transition: var(--btn-transition);
+  }
+  .btn--active:hover {
+    background-color: #0e76b7;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0px 40px 0px;
+}
+.header__nav-list {
+  display: flex;
+  column-gap: 40px;
+}
+.header__nav-item {
+  display: inline;
+  font-weight: 400;
+  font-size: 18px;
+}
+.header__nav-link--active {
+  color: #118da8;
+}
+@media (hover: hover) {
+  .header__nav-link--active:hover {
+    color: #0f7990;
+  }
+}
+
+.hero {
+  display: flex;
+  column-gap: 60px;
+  align-items: center;
+}
+.hero__heading {
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 88px;
+  letter-spacing: 3.2px;
+  margin: 0px 0px 70px 0px;
+}
+.hero__heading--next::after {
+  position: absolute;
+  content: url("/assets/images/next.svg");
+  margin: 20px 0px 0px -158px;
+}
+
+.social-links__list {
+  display: flex;
+  column-gap: 18px;
+}
+.social-links__title {
+  display: block;
+  margin: 0px 0px 16px 0px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.latest-episodes__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.latest-episodes__heading {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 79px;
+  letter-spacing: 2.88px;
+  margin: 100px 0px;
+}
+.latest-episodes__episodes_list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 60px;
+}
+
+.episode {
+  background-color: #000;
+  padding: 40px;
+  border-radius: 32px;
+  min-width: 100%;
+  display: flex;
+  column-gap: 50px;
+}
+.episode__header {
+  margin: 0px 0px 18px 0px;
+}
+.episode__number {
+  font-size: 17px;
+  line-height: 27px;
+  color: #118ad8;
+}
+.episode__title {
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  letter-spacing: 2.56px;
+}
+.episode__description {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0px 0px 18px 0px;
+}
+
+.badges-list {
+  margin: 0px 0px 50px 0px;
+}
+.badges-list__badge {
+  border-radius: 6px;
+  padding: 0 16px;
+  font-size: 18px;
+  line-height: 27px;
+  background-color: #191919;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0px;
+}
+
+.author {
+  color: #a1a1a1;
+  font-weight: 400;
+  font-size: 18px;
+}
+@media (hover: hover) {
+  .author:hover {
+    color: #8a8a8a;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

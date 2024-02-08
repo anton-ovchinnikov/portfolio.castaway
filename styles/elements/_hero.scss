@@ -1,0 +1,32 @@
+.hero {
+  display: flex;
+  column-gap: 60px;
+  align-items: center;
+
+  &__heading {
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 88px;
+    letter-spacing: 3.2px;
+    margin: 0px 0px 70px 0px;
+
+    &--next::after {
+      position: absolute;
+      content: url("/assets/images/next.svg");
+      margin: 20px 0px 0px -158px;
+    }
+  }
+}
+
+.social-links {
+  &__list {
+    display: flex;
+    column-gap: 18px;
+  }
+  &__title {
+    display: block;
+    margin: 0px 0px 16px 0px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
