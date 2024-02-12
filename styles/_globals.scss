@@ -1,9 +1,3 @@
-:root {
-  --link-transition: color 0.1s ease;
-  --btn-transition: background-color 0.1s ease;
-  --font-family: 'DM Sans', sans-serif;
-}
-
 body {
   color: #ffffff;
   background-color: #191919;
@@ -17,12 +11,12 @@ body {
 a {
   color: #ffffff;
   text-decoration: none;
-  transition: var(--link-transition);
+  transition: var(--transition-duration);
   
   @media (hover: hover) {
     &:hover {
       color: #dadada;
-      transition: var(--link-transition);
+      transition: var(--transition-duration);
     }
   }
 }
@@ -48,7 +42,7 @@ a {
   line-height: 27px;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
-  transition: var(--btn-transition);
+  transition: var(--transition-duration);
   cursor: pointer;
 
   &--active {
@@ -61,7 +55,7 @@ a {
   @media (hover: hover) {
     &:hover {
       background-color: rgba(255, 255, 255, 0.18);
-      transition: var(--btn-transition);
+      transition: var(--transition-duration);
     }
     &--active:hover {
       background-color: #0e76b7;

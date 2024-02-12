@@ -151,9 +151,18 @@ svg * {
   }
 }
 :root {
-  --link-transition: color 0.1s ease;
-  --btn-transition: background-color 0.1s ease;
+  --primary-dark-color: #191919;
+  --primary-dark-color-alt: #000000;
+  --primary-light-color: #FFFFFF;
+  --primary-light-color-alt: #FFFFFFB2;
+  --secondary-light-color: #118DA8;
+  --secondary-light-color-alt: #118DA8B3;
+  --transition-duration: 0.2s;
   --font-family: "DM Sans", sans-serif;
+  --border-radius-small: 6px;
+  --border-radius-large: 32px;
+  --input-height: 82px;
+  --container-width: 1300px;
 }
 
 body {
@@ -169,12 +178,12 @@ body {
 a {
   color: #ffffff;
   text-decoration: none;
-  transition: var(--link-transition);
+  transition: var(--transition-duration);
 }
 @media (hover: hover) {
   a:hover {
     color: #dadada;
-    transition: var(--link-transition);
+    transition: var(--transition-duration);
   }
 }
 
@@ -198,7 +207,7 @@ a {
   line-height: 27px;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
-  transition: var(--btn-transition);
+  transition: var(--transition-duration);
   cursor: pointer;
 }
 .btn--active {
@@ -210,7 +219,7 @@ a {
 @media (hover: hover) {
   .btn:hover {
     background-color: rgba(255, 255, 255, 0.18);
-    transition: var(--btn-transition);
+    transition: var(--transition-duration);
   }
   .btn--active:hover {
     background-color: #0e76b7;
