@@ -153,13 +153,17 @@ svg * {
 :root {
   --link-transition: color 0.1s ease;
   --btn-transition: background-color 0.1s ease;
+  --font-family: "DM Sans", sans-serif;
 }
 
 body {
   color: #ffffff;
   background-color: #191919;
   padding: 0px 90px 0px 90px;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
 }
 
 a {
