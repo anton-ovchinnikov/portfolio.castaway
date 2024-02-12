@@ -1,0 +1,14 @@
+.button {
+  font-size: 17px;
+  color: currentColor;
+  background-color: var(--secondary-light-color);
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--border-radius-small);
+
+  @include hover {
+    & {
+      background-color: var(--secondary-light-color-alt);
+    }
+  }
+}

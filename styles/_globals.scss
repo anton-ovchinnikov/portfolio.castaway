@@ -1,64 +1,17 @@
 body {
-  color: #ffffff;
-  background-color: #191919;
-  padding: 0px 90px 0px 90px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 22px;
   line-height: 1;
+  color: var(--primary-light-color);
+  background-color: var(--primary-dark-color);
 }
 
 a {
-  color: #ffffff;
+  color: inherit;
   text-decoration: none;
-  transition: var(--transition-duration);
-  
-  @media (hover: hover) {
-    &:hover {
-      color: #dadada;
-      transition: var(--transition-duration);
-    }
-  }
 }
 
-.btn-group {
-  display: flex;
-  column-gap: 1px;
-
-  :first-child {
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-  }
-  :last-child {
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-  }
-}
-
-.btn {
-  padding: 10px 20px;
-  border: none;
-  font-size: 17px;
-  line-height: 27px;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.2);
-  transition: var(--transition-duration);
-  cursor: pointer;
-
-  &--active {
-    background-color: #118ad8;
-  }
-  &--rounded {
-    border-radius: 6px;
-  }
-  
-  @media (hover: hover) {
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.18);
-      transition: var(--transition-duration);
-    }
-    &--active:hover {
-      background-color: #0e76b7;
-    }
-  }
+a, button, input, svg * {
+  transition-duration: var(--transition-duration);
 }
