@@ -201,6 +201,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 12px 20px;
   border: none;
   border-radius: var(--border-radius-small);
+  cursor: default;
 }
 @media (hover: hover) {
   .button:hover {
@@ -285,11 +286,9 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 .latest-episodes__heading {
-  font-weight: 400;
   font-size: 64px;
-  line-height: 79px;
   letter-spacing: 2.88px;
-  margin: 100px 0px;
+  margin: 95px 0 70px 0;
 }
 .latest-episodes__episodes_list {
   display: flex;
@@ -298,45 +297,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .episode {
-  background-color: #000;
+  background-color: var(--primary-dark-color-alt);
   padding: 40px;
-  border-radius: 32px;
-  min-width: 100%;
+  border-radius: var(--border-radius-large);
   display: flex;
   column-gap: 50px;
 }
 .episode__header {
-  margin: 0px 0px 18px 0px;
+  margin-bottom: 18px;
 }
 .episode__number {
   font-size: 17px;
-  line-height: 27px;
-  color: #118ad8;
+  color: var(--secondary-light-color);
 }
 .episode__title {
-  margin-bottom: 28px;
-  font-weight: 400;
   font-size: 64px;
-  line-height: 70px;
+  line-height: 1.1;
   letter-spacing: 2.56px;
+  margin-bottom: 28px;
 }
 .episode__description {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 33px;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0px 0px 18px 0px;
+  color: var(--primary-light-color-alt);
+  margin-bottom: 18px;
 }
 
 .badges-list {
-  margin: 0px 0px 50px 0px;
+  margin-bottom: 48px;
 }
 .badges-list__badge {
-  border-radius: 6px;
-  padding: 0 16px;
+  border-radius: var(--border-radius-small);
+  padding: 4px 16px;
   font-size: 18px;
-  line-height: 27px;
-  background-color: #191919;
+  background-color: var(--primary-dark-color);
 }
 
 .footer {

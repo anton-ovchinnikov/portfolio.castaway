@@ -5,6 +5,7 @@
   padding: 12px 20px;
   border: none;
   border-radius: var(--border-radius-small);
+  cursor: default;
 
   @include hover {
     & {
