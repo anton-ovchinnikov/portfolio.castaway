@@ -343,17 +343,21 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 100px 0px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .author {
-  color: #a1a1a1;
-  font-weight: 400;
-  font-size: 18px;
+  color: var(--secondary-light-color);
 }
 @media (hover: hover) {
   .author:hover {
-    color: #8a8a8a;
+    color: var(--secondary-light-color-alt);
+  }
+}
+@media (hover: none) {
+  .author:active {
+    color: var(--secondary-light-color-alt);
   }
 }
 
