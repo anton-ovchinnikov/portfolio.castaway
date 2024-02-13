@@ -195,6 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button {
+  display: inline-block;
   font-size: 17px;
   color: currentColor;
   background-color: var(--secondary-light-color);
@@ -303,6 +304,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   column-gap: 50px;
 }
+.episode__content {
+  display: flex;
+  flex-wrap: wrap;
+}
 .episode__header {
   margin-bottom: 18px;
 }
@@ -319,6 +324,9 @@ h1, h2, h3, h4, h5, h6 {
 .episode__description {
   color: var(--primary-light-color-alt);
   margin-bottom: 18px;
+}
+.episode__footer {
+  align-self: end;
 }
 
 .badges-list {

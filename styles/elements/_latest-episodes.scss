@@ -25,6 +25,10 @@
   display: flex;
   column-gap: 50px;
 
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__header {
     margin-bottom: 18px;
   }
@@ -41,6 +45,9 @@
   &__description {
     color: var(--primary-light-color-alt);
     margin-bottom: 18px;
+  }
+  &__footer {
+    align-self: end;
   }
 }
 
