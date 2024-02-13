@@ -166,6 +166,12 @@ svg * {
   --container-padding-x: 70px;
 }
 
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
 body {
   font-family: var(--font-family);
   font-weight: 400;
