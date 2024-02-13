@@ -264,7 +264,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 90px;
 }
 .hero__heading--next::after {
-  content: url("../../assets/images/next.svg");
+  content: url("../assets/images/next.svg");
   position: absolute;
   margin: 20px 0 0 -152px;
 }
