@@ -213,6 +213,7 @@ a, button, input, svg * {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 40px 0 40px 0;
 }
 .header__nav-list {
   display: flex;
@@ -221,14 +222,29 @@ a, button, input, svg * {
 .header__nav-item {
   display: inline;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 17px;
+}
+@media (hover: hover) {
+  .header__nav-item:hover {
+    color: var(--primary-light-color-alt);
+  }
+}
+@media (hover: none) {
+  .header__nav-item:active {
+    color: var(--primary-light-color-alt);
+  }
 }
 .header__nav-link--active {
-  color: #118da8;
+  color: var(--secondary-light-color);
 }
 @media (hover: hover) {
   .header__nav-link--active:hover {
-    color: #0f7990;
+    color: var(--secondary-light-color-alt);
+  }
+}
+@media (hover: none) {
+  .header__nav-link--active:active {
+    color: var(--secondary-light-color-alt);
   }
 }
 

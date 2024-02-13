@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 40px 0 40px 0;
 
   &__nav-list {
     display: flex;
@@ -10,15 +11,17 @@
   &__nav-item {
     display: inline;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 17px;
+
+    @include hover {
+      color: var(--primary-light-color-alt);
+    }
   }
   &__nav-link--active {
-    color: #118da8;
-  }
+    color: var(--secondary-light-color);
 
-  @media (hover: hover) {
-    &__nav-link--active:hover {
-      color: #0f7990;
+    @include hover {
+      color: var(--secondary-light-color-alt);
     }
   }
 }
