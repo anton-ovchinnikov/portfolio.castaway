@@ -176,7 +176,7 @@ body {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 22px;
-  line-height: 1;
+  line-height: 1.28;
   color: var(--primary-light-color);
   background-color: var(--primary-dark-color);
 }
@@ -188,6 +188,10 @@ a {
 
 a, button, input, svg * {
   transition-duration: var(--transition-duration);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
 }
 
 .button {
@@ -252,29 +256,27 @@ a, button, input, svg * {
   display: flex;
   column-gap: 60px;
   align-items: center;
+  margin: 0;
 }
 .hero__heading {
   font-size: 70px;
-  font-weight: 400;
-  line-height: 88px;
   letter-spacing: 3.2px;
-  margin: 0px 0px 70px 0px;
+  margin-bottom: 90px;
 }
 .hero__heading--next::after {
+  content: url("../../assets/images/next.svg");
   position: absolute;
-  content: url("https://anton-ovchinnikov.github.io/portfolio.castaway/assets/images/next.svg");
-  margin: 20px 0px 0px -158px;
+  margin: 20px 0 0 -152px;
 }
 
 .social-links__list {
   display: flex;
-  column-gap: 18px;
+  column-gap: 17px;
 }
 .social-links__title {
   display: block;
-  margin: 0px 0px 16px 0px;
+  margin-bottom: 16px;
   font-size: 15px;
-  line-height: 24px;
 }
 
 .latest-episodes__header {
