@@ -12,10 +12,28 @@ a {
   text-decoration: none;
 }
 
-a, button, input, svg * {
+a,
+button,
+input,
+svg * {
   transition-duration: var(--transition-duration);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline;
 }

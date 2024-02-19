@@ -1,110 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" href="styles/style.css" />
 
-    <title>Castaway</title>
-</head>
-<body>
-<header class="header container">
-    <a href="/" class="header__logo">
-        <img src="./assets/images/logo.svg" alt="Castaway" loading="lazy"/>
-    </a>
-    <nav class="header__nav-menu">
-        <ul class="header__nav-list">
-            <li class="header__nav-item"><a class="header__nav-link header__nav-link--active" href="#">Home</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Episodes</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">About</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <section class="hero container">
-        <img src="./assets/images/hero.png" alt="" class="hero__img" loading="lazy" width="650" height="873"/>
-        <div class="hero__content">
-            <h1 class="hero__heading">
-                Take your<br/>podcast to the<br/><span class="hero__heading--next">next</span> <b>level</b>
-            </h1>
-            <div class="social-links">
-                <span class="social-links__title">Listen on</span>
-                <ul class="social-links__list">
-                    <li class="social-links__link">
-                        <a href="#"><img src="./assets/images/spotify.svg" alt="spotify" loading="lazy"/></a>
-                    </li>
-                    <li class="social-links__link">
-                        <a href="#"><img src="./assets/images/soundcloud.svg" alt="soundcloud" loading="lazy"/></a>
-                    </li>
-                    <li class="social-links__link">
-                        <a href="#"><img src="./assets/images/apple.svg" alt="apple" loading="lazy"/></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="latest-episodes container">
-        <header class="latest-episodes__header">
-            <h2 class="latest-episodes__heading">Latest episodes</h2>
-            <a class="button" href="#">View all episodes</a>
-        </header>
-        <div class="latest-episodes__episodes_list episodes_list">
-            <article class="episodes-list__episode episode">
-                <img class="" src="./assets/images/episode_img.png" alt="" loading="lazy"/>
-                <div class="episode__content">
-                    <header class="episode__header">
-                        <div class="episode__badges badges-list">
-                            <span class="badges-list__badge">Gear</span>
-                        </div>
-                        <a class="episode__number" href="#">Episode 3</a>
-                    </header>
-                    <h3 class="episode__title">Should you get outboard audio gear?</h3>
-                    <p class="episode__description">Is hardware really worth it when it comes to podcasting? The answer is...it depends. Here’s our reasons on why you might want to consider picking something up.</p>
-                    <footer class="episode__footer">
-                        <a class="button" href="#">View episode details</a>
-                    </footer>
-                </div>
-            </article>
-            <article class="episodes-list__episode episode">
-                <img class="" src="./assets/images/episode_img.png" alt="" loading="lazy"/>
-                <div class="episode__content">
-                    <header class="episode__header">
-                        <div class="episode__badges badges-list">
-                            <span class="badges-list__badge">Gear</span>
-                        </div>
-                        <a class="episode__number" href="#">Episode 3</a>
-                    </header>
-                    <h3 class="episode__title">Should you get outboard audio gear?</h3>
-                    <p class="episode__description">Is hardware really worth it when it comes to podcasting? The answer is...it depends. Here’s our reasons on why you might want to consider picking something up.</p>
-                    <footer class="episode__footer">
-                        <a class="button" href="#">View episode details</a>
-                    </footer>
-                </div>
-            </article>
-        </div>
-    </section>
-    <section class="staff container">
-
-    </section>
-</main>
-<footer class="footer container">
-    <a href="/" class="footer__logo logo">
-        <img src="./assets/images/logo.svg" alt="logo" loading="lazy"/>
-    </a>
-    <a class="author" href="https://github.com/anton-ovchinnikov">by Anton Ovchinnikov</a>
-    <ul class="social-links__list">
-        <li class="social-links__link">
-            <a href="#"><img src="./assets/images/spotify.svg" alt="spotify" loading="lazy"/></a>
-        </li>
-        <li class="social-links__link">
-            <a href="#"><img src="./assets/images/soundcloud.svg" alt="soundcloud" loading="lazy"/></a>
-        </li>
-        <li class="social-links__link">
-            <a href="#"><img src="./assets/images/apple.svg" alt="apple" loading="lazy"/></a>
-        </li>
-    </ul>
-</footer>
-</body>
+		<title>Castaway</title>
+	</head>
+	<body>
+		<header class="header container">
+			<a href="/" class="header__logo">
+				<img src="./assets/images/logo.svg" alt="Castaway" loading="lazy" />
+			</a>
+			<nav class="header__nav-menu">
+				<ul class="header__nav-list">
+					<li class="header__nav-item">
+						<a class="header__nav-link header__nav-link--active" href="#"
+							>Home</a
+						>
+					</li>
+					<li class="header__nav-item">
+						<a class="header__nav-link" href="#">Episodes</a>
+					</li>
+					<li class="header__nav-item">
+						<a class="header__nav-link" href="#">About</a>
+					</li>
+					<li class="header__nav-item">
+						<a class="header__nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="hero container">
+				<img
+					src="./assets/images/hero.png"
+					alt=""
+					class="hero__img"
+					loading="lazy"
+					width="650"
+					height="873"
+				/>
+				<div class="hero__content">
+					<h1 class="hero__heading">
+						Take your<br />podcast to the<br /><span class="hero__heading--next"
+							>next</span
+						>
+						<b>level</b>
+					</h1>
+					<div class="social-links">
+						<span class="social-links__title">Listen on</span>
+						<ul class="social-links__list">
+							<li class="social-links__link">
+								<a href="#"
+									><img
+										src="./assets/images/spotify.svg"
+										alt="spotify"
+										loading="lazy"
+								/></a>
+							</li>
+							<li class="social-links__link">
+								<a href="#"
+									><img
+										src="./assets/images/soundcloud.svg"
+										alt="soundcloud"
+										loading="lazy"
+								/></a>
+							</li>
+							<li class="social-links__link">
+								<a href="#"
+									><img
+										src="./assets/images/apple.svg"
+										alt="apple"
+										loading="lazy"
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="latest-episodes container">
+				<header class="latest-episodes__header">
+					<h2 class="latest-episodes__heading">Latest episodes</h2>
+					<a class="button" href="#">View all episodes</a>
+				</header>
+				<div class="latest-episodes__episodes_list episodes_list">
+					<article class="episodes-list__episode episode">
+						<img
+							class=""
+							src="./assets/images/episode_img.png"
+							alt=""
+							loading="lazy"
+						/>
+						<div class="episode__content">
+							<header class="episode__header">
+								<div class="episode__badges badges-list">
+									<span class="badges-list__badge">Gear</span>
+								</div>
+								<a class="episode__number" href="#">Episode 3</a>
+							</header>
+							<h3 class="episode__title">
+								Should you get outboard audio gear?
+							</h3>
+							<p class="episode__description">
+								Is hardware really worth it when it comes to podcasting? The
+								answer is...it depends. Here’s our reasons on why you might want
+								to consider picking something up.
+							</p>
+							<footer class="episode__footer">
+								<a class="button" href="#">View episode details</a>
+							</footer>
+						</div>
+					</article>
+					<article class="episodes-list__episode episode">
+						<img
+							class=""
+							src="./assets/images/episode_img.png"
+							alt=""
+							loading="lazy"
+						/>
+						<div class="episode__content">
+							<header class="episode__header">
+								<div class="episode__badges badges-list">
+									<span class="badges-list__badge">Gear</span>
+								</div>
+								<a class="episode__number" href="#">Episode 3</a>
+							</header>
+							<h3 class="episode__title">
+								Should you get outboard audio gear?
+							</h3>
+							<p class="episode__description">
+								Is hardware really worth it when it comes to podcasting? The
+								answer is...it depends. Here’s our reasons on why you might want
+								to consider picking something up.
+							</p>
+							<footer class="episode__footer">
+								<a class="button" href="#">View episode details</a>
+							</footer>
+						</div>
+					</article>
+				</div>
+			</section>
+			<section class="staff container">
+				<div class="staff__content content">
+					<button class="content__next-button">
+						<img src="./assets/images/right_arrow.png" alt="" />
+					</button>
+					<a href="#" class="content__meet-link">Meet your host</a>
+					<h3 class="content__title">Jacob Paulaner</h3>
+					<p class="content__description">
+						Jacob has a background in audio engineering, and has been podcasting
+						since the early days. He’s here to help you level up your game by
+						sharing everything he’s learned along the way.
+					</p>
+				</div>
+				<img src="./assets/images/staff_1.png" alt="" />
+			</section>
+		</main>
+		<footer class="footer container">
+			<a href="/" class="footer__logo logo">
+				<img src="./assets/images/logo.svg" alt="logo" loading="lazy" />
+			</a>
+			<a class="author" href="https://github.com/anton-ovchinnikov"
+				>by Anton Ovchinnikov</a
+			>
+			<ul class="social-links__list">
+				<li class="social-links__link">
+					<a href="#"
+						><img
+							src="./assets/images/spotify.svg"
+							alt="spotify"
+							loading="lazy"
+					/></a>
+				</li>
+				<li class="social-links__link">
+					<a href="#"
+						><img
+							src="./assets/images/soundcloud.svg"
+							alt="soundcloud"
+							loading="lazy"
+					/></a>
+				</li>
+				<li class="social-links__link">
+					<a href="#"
+						><img src="./assets/images/apple.svg" alt="apple" loading="lazy"
+					/></a>
+				</li>
+			</ul>
+		</footer>
+	</body>
 </html>

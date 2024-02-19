@@ -1,12 +1,4 @@
-@import "normalize",
-        "variables",
-        "mixins",
-        "utils",
-        "globals";
+@import "normalize", "variables", "mixins", "utils", "globals";
 
-@import
-        "elements/button",
-        "elements/header",
-        "elements/hero",
-        "elements/latest-episodes",
+@import "elements/button", "elements/header", "elements/hero", "elements/latest-episodes", "elements/staff",
         "elements/footer";

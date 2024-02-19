@@ -1,14 +1,18 @@
 .latest-episodes {
+  padding-top: 94px;
+  padding-bottom: 160px;
+
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin-bottom: 64px;
   }
 
   &__heading {
     font-size: 64px;
     letter-spacing: 2.88px;
-    margin: 95px 0 70px 0;
   }
 
   &__episodes_list {
