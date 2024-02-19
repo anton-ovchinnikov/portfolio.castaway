@@ -17,6 +17,12 @@ button,
 input,
 svg * {
   transition-duration: var(--transition-duration);
+  border: none;
+}
+
+::placeholder {
+  color: var(--primary-light-color-alt);
+  font-size: 24px;
 }
 
 h1,
@@ -26,6 +32,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
+  letter-spacing: 2.88px;
 }
 
 button {
