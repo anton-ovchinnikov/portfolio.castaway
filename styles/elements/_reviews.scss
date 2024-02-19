@@ -1,0 +1,33 @@
+.reviews {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__reviews-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+.review {
+  display: inline-flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 50px;
+  background-color: var(--primary-dark-color-alt);
+  border-radius: var(--border-radius-large);
+
+  &__rate {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  &__title {
+    display: block;
+    font-size: 36px;
+  }
+  &__author {
+    font-size: 24px;
+    color: var(--primary-light-color-alt);
+  }
+}
