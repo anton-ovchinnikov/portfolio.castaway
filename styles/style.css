@@ -420,7 +420,6 @@ button {
   padding: 60px;
   background-color: var(--primary-dark-color-alt);
   border-radius: var(--border-radius-large);
-  align-items: center;
 }
 .newsletter .content__title {
   font-size: 72px;
