@@ -25,7 +25,13 @@
     }
     &__meet-link {
       font-size: 18px;
-      color: var(--secondary-light-color-alt);
+      padding-top: var(--link-ux-padding);
+      padding-bottom: var(--link-ux-padding);
+      color: var(--secondary-light-color);
+
+      @include hover {
+        color: var(--secondary-light-color-alt);
+      }
     }
     &__title {
       font-size: 65px;

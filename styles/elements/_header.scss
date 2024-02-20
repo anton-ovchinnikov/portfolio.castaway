@@ -7,7 +7,6 @@
 
   &__nav-list {
     display: flex;
-    column-gap: 40px;
   }
   &__nav-item {
     display: inline;
@@ -17,6 +16,9 @@
     @include hover {
       color: var(--primary-light-color-alt);
     }
+  }
+  &__nav-link {
+    padding: var(--link-ux-padding);
   }
   &__nav-link--active {
     color: var(--secondary-light-color);

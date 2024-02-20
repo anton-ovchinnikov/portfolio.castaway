@@ -153,10 +153,10 @@ svg * {
 :root {
   --primary-dark-color: #191919;
   --primary-dark-color-alt: #000000;
-  --primary-light-color: #FFFFFF;
-  --primary-light-color-alt: #FFFFFFB2;
-  --secondary-light-color: #118DA8;
-  --secondary-light-color-alt: #118DA8B3;
+  --primary-light-color: #ffffff;
+  --primary-light-color-alt: #ffffffb2;
+  --secondary-light-color: #118da8;
+  --secondary-light-color-alt: #118da8b3;
   --font-family: "DM Sans", sans-serif;
   --input-height: 82px;
   --transition-duration: 0.2s;
@@ -164,6 +164,7 @@ svg * {
   --border-radius-large: 32px;
   --container-width: 1300px;
   --container-padding-x: 70px;
+  --link-ux-padding: 20px;
 }
 
 .container {
@@ -253,8 +254,6 @@ button {
 }
 .header__nav-list {
   display: flex;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
 }
 .header__nav-item {
   display: inline;
@@ -270,6 +269,9 @@ button {
   .header__nav-item:active {
     color: var(--primary-light-color-alt);
   }
+}
+.header__nav-link {
+  padding: var(--link-ux-padding);
 }
 .header__nav-link--active {
   color: var(--secondary-light-color);
@@ -349,6 +351,18 @@ button {
 .episode__number {
   font-size: 17px;
   color: var(--secondary-light-color);
+  padding-top: var(--link-ux-padding);
+  padding-bottom: var(--link-ux-padding);
+}
+@media (hover: hover) {
+  .episode__number:hover {
+    color: var(--secondary-light-color-alt);
+  }
+}
+@media (hover: none) {
+  .episode__number:active {
+    color: var(--secondary-light-color-alt);
+  }
 }
 .episode__title {
   font-size: 64px;
@@ -398,7 +412,19 @@ button {
 }
 .staff .content__meet-link {
   font-size: 18px;
-  color: var(--secondary-light-color-alt);
+  padding-top: var(--link-ux-padding);
+  padding-bottom: var(--link-ux-padding);
+  color: var(--secondary-light-color);
+}
+@media (hover: hover) {
+  .staff .content__meet-link:hover {
+    color: var(--secondary-light-color-alt);
+  }
+}
+@media (hover: none) {
+  .staff .content__meet-link:active {
+    color: var(--secondary-light-color-alt);
+  }
 }
 .staff .content__title {
   font-size: 65px;
@@ -497,8 +523,20 @@ button {
 .footer__nav .nav__list {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
 }
 .footer__nav .nav__link {
+  display: inline-block;
   font-size: 18px;
+  padding-top: calc(var(--link-ux-padding) / 2);
+  padding-bottom: calc(var(--link-ux-padding) / 2);
+}
+@media (hover: hover) {
+  .footer__nav .nav__link:hover {
+    color: var(--primary-light-color-alt);
+  }
+}
+@media (hover: none) {
+  .footer__nav .nav__link:active {
+    color: var(--primary-light-color-alt);
+  }
 }/*# sourceMappingURL=style.css.map */

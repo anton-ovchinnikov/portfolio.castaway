@@ -38,6 +38,12 @@
   &__number {
     font-size: 17px;
     color: var(--secondary-light-color);
+    padding-top: var(--link-ux-padding);
+    padding-bottom: var(--link-ux-padding);
+
+    @include hover {
+      color: var(--secondary-light-color-alt);
+    }
   }
   &__title {
     font-size: 64px;
