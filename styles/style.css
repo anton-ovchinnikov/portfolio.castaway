@@ -477,21 +477,29 @@ button {
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
-.author {
-  color: var(--secondary-light-color);
+.footer .logo-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
 }
-@media (hover: hover) {
-  .author:hover {
-    color: var(--secondary-light-color-alt);
-  }
+.footer .logo-container__social-links {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
-@media (hover: none) {
-  .author:active {
-    color: var(--secondary-light-color-alt);
-  }
+.footer__nav {
+  display: flex;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+}
+.footer__nav .nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.footer__nav .nav__link {
+  font-size: 18px;
 }/*# sourceMappingURL=style.css.map */
