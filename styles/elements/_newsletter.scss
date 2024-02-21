@@ -2,17 +2,29 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  @include tablet-large {
+    padding-bottom: 50px;
+  }
+
   &__wrapper {
     display: flex;
     column-gap: 76px;
     padding: 60px;
     background-color: var(--primary-dark-color-alt);
     border-radius: var(--border-radius-large);
+
+    @include tablet-large {
+      column-gap: 50px;
+    }
   }
 
   .content {
     &__title {
       font-size: 72px;
+
+      @include tablet-large {
+        font-size: 58px;
+      }
 
       &--small {
         font-size: 18px;

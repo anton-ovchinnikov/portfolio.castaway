@@ -2,6 +2,10 @@
   padding-top: 94px;
   padding-bottom: 160px;
 
+  @include tablet-large {
+    padding-bottom: 80px;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -12,6 +16,10 @@
 
   &__heading {
     font-size: 64px;
+
+    @include tablet-large {
+      font-size: 58px;
+    }
   }
 
   &__episodes_list {
@@ -27,10 +35,21 @@
   border-radius: var(--border-radius-large);
   display: flex;
   column-gap: 50px;
+  align-items: center;
 
+  @include tablet-large {
+    column-gap: 40px;
+  }
+
+  &__img {
+    @include tablet-large {
+      width: 350px;
+    }
+  }
   &__content {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
   }
   &__header {
     margin-bottom: 18px;
@@ -46,20 +65,26 @@
     }
   }
   &__title {
-    font-size: 64px;
+    font-size: 52px;
     margin-bottom: 28px;
+
+    @include tablet-large {
+      font-size: 46px;
+    }
   }
   &__description {
     color: var(--primary-light-color-alt);
     margin-bottom: 18px;
   }
   &__footer {
-    align-self: end;
+    flex-grow: 1;
+    display: flex;
+    align-items: end;
   }
 }
 
 .badges-list {
-  margin-bottom: 48px;
+  margin-bottom: 26px;
 
   &__badge {
     border-radius: var(--border-radius-small);

@@ -6,6 +6,10 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  @include tablet-large {
+    padding-bottom: 50px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -36,10 +40,18 @@
     &__title {
       font-size: 65px;
       margin-bottom: 28px;
+
+      @include tablet-large {
+        font-size: 56px;
+      }
     }
     &__description {
-      font-size: 22px;
       color: var(--primary-light-color-alt);
+    }
+    &__img {
+      @include tablet-large {
+        width: 550px;
+      }
     }
   }
 }

@@ -2,6 +2,10 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  @include tablet-large {
+    padding-bottom: 50px;
+  }
+
   &__reviews-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -25,6 +29,10 @@
   &__title {
     display: block;
     font-size: 36px;
+
+    @include tablet-large {
+      font-size: 32px;
+    }
   }
   &__author {
     font-size: 24px;

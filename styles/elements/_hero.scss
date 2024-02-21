@@ -3,6 +3,11 @@
   column-gap: 60px;
   align-items: center;
 
+  &__img {
+    @include tablet-large {
+      width: 550px;
+    }
+  }
   &__heading {
     font-size: 70px;
     margin-bottom: 90px;

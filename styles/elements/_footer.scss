@@ -4,6 +4,10 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  @include tablet-large {
+    padding-bottom: 50px;
+  }
+
   .logo-container {
     display: flex;
     flex-direction: column;
