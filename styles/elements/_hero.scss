@@ -5,15 +5,19 @@
 
   &__img {
     @include tablet-large {
-      width: 550px;
+      width: 450px;
     }
   }
   &__heading {
     font-size: 70px;
     margin-bottom: 90px;
 
+    @include tablet-large {
+      font-size: 64px;
+    }
+
     &--next::after {
-      content: url("../assets/images/next.svg");
+      content: url('../assets/images/next.svg');
       position: absolute;
       margin: 20px 0 0 -152px;
     }

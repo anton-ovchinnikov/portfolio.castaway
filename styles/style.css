@@ -295,12 +295,17 @@ button {
 }
 @media (max-width: 1200px) {
   .hero__img {
-    width: 550px;
+    width: 450px;
   }
 }
 .hero__heading {
   font-size: 70px;
   margin-bottom: 90px;
+}
+@media (max-width: 1200px) {
+  .hero__heading {
+    font-size: 64px;
+  }
 }
 .hero__heading--next::after {
   content: url("../assets/images/next.svg");
@@ -480,7 +485,7 @@ button {
 }
 @media (max-width: 1200px) {
   .staff .content__img {
-    width: 550px;
+    width: 450px;
   }
 }
 
